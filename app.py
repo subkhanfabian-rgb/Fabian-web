@@ -68,7 +68,9 @@ def contact():
         data=json.dumps(payload).encode("utf-8"),
         headers={
             "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": "Fabian-Portfolio/1.0"
         },
         method="POST"
     )
