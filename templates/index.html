@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio pribadi Fabian Subkhan">
+    <title>Fabian Subkhan | Personal Portfolio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <a href="#home" class="logo">Fabian<span>.</span></a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Skill</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle"
+                    aria-label="Ubah tema" title="Ubah mode terang atau gelap">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="hamburger" id="hamburger"
+                    aria-label="Buka menu navigasi">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <p class="hero-greeting">Halo, saya</p>
+                    <h1>Fabian <span>Subkhan</span></h1>
+                    <h2>Developer, Problem Solver, dan Creative Thinker.</h2>
+
+                    <p class="hero-description">
+                        Saya adalah Mahasiswa Teknologi Rekayasa Otomasi yang berminat pada
+                        sistem otomasi pada industri, pemrograman, dan pengembangan aplikasi.
+                        Saya bersemangat untuk menciptakan solusi inovatif yang dapat
+                        memberikan dampak positif bagi masyarakat.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn btn-primary">
+                            Tentang Saya
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+                    </div>
+
+                    <div class="hero-social">
+                        <a href="https://github.com/" target="_blank"
+                            rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper reveal">
+                    <div class="hero-image-decoration"></div>
+                    <div class="profile-card">
+                        <img
+                            src="{{ url_for('static', filename='images/profile.jpg') }}"
+                            alt="Foto profil Fabian Subkhan"
+                            class="profile-image"
+                            onerror="this.style.display='none'; document.getElementById('profileFallback').style.display='flex';"
+                        >
+                        <div class="profile-fallback" id="profileFallback">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-down" aria-label="Scroll ke bagian tentang">
+                <span>Scroll</span>
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </section>
+
+        <!-- Tentang -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-subtitle">Mengenal Lebih Dekat</p>
+                    <h2>Tentang Saya</h2>
+                    <p>Informasi singkat mengenai latar belakang, minat, dan tujuan saya.</p>
+                </div>
+
+                <div class="about-grid">
+                    <article class="about-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3>Biodata Singkat</h3>
+                        <ul class="about-list">
+                            <li><strong>Nama:</strong> Fabian Subkhan</li>
+                            <li><strong>Domisili:</strong> Indonesia</li>
+                            <li><strong>Bidang:</strong> Automation Engineer</li>
+                            <li><strong>Status:</strong> Mahasiswa / Profesional</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3>Pendidikan</h3>
+                        <ul class="about-list">
+                            <li><strong>D4 Teknologi Rekayasa Otomasi</strong></li>
+                            <li>UI (UNDIP INDONESIA)</li>
+                            <li>2026 - Sekarang</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3>Minat dan Hobi</h3>
+                        <ul class="about-list">
+                            <li>Automation</li>
+                            <li>Mempelajari teknologi baru</li>
+                            <li>Problem solving</li>
+                            <li>Berkelana dan mengeksplorasi tempat baru</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3>Tujuan</h3>
+                        <p>
+                            Menjadi automation engineer profesional yang mampu menciptakan
+                            solusi otomasi yang efisien dan berdampak positif bagi masyarakat.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-subtitle">Kemampuan Utama</p>
+                    <h2>Skill &amp; Keahlian</h2>
+                    <p>Beberapa kemampuan teknis dan nonteknis yang terus saya kembangkan.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-header">
+                            <div class="skill-title">
+                                <i class="fa-brands fa-python"></i>
+                                <h3>Python</h3>
+                            </div>
+                            <span>20%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-progress="20"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-header">
+                            <div class="skill-title">
+                                <i class="fa-solid fa-people-group"></i>
+                                <h3>Teamwork</h3>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-progress="90"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-header">
+                            <div class="skill-title">
+                                <i class="fa-solid fa-microchip"></i>
+                                <h3>Multisim</h3>
+                            </div>
+                            <span>20%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-progress="20"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-header">
+                            <div class="skill-title">
+                                <i class="fa-brands fa-js"></i>
+                                <h3>Prompt AI</h3>
+                            </div>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-progress="80"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-header">
+                            <div class="skill-title">
+                                <i class="fa-solid fa-puzzle-piece"></i>
+                                <h3>Problem Solving</h3>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-progress="75"></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-header">
+                            <div class="skill-title">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                <h3>Critical Thinking</h3>
+                            </div>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-progress="85"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project: belum ada project -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-subtitle">Perjalanan Berkarya</p>
+                    <h2>Project Saya</h2>
+                    <p>
+                        Saat ini saya sedang belajar dan mengembangkan kemampuan
+                        di bidang pemrograman dan teknologi otomasi.
+                    </p>
+                </div>
+
+                <div class="projects-empty reveal">
+                    <div class="projects-empty-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3>Belum Ada Project</h3>
+                    <p>
+                        Saat ini belum ada project yang dipublikasikan.
+                        Saya sedang belajar dan mempersiapkan karya pertama saya.
+                        Project akan ditampilkan di bagian ini setelah selesai dikembangkan.
+                    </p>
+
+                    <span class="coming-soon">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                        Coming Soon
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-subtitle">Mari Terhubung</p>
+                    <h2>Hubungi Saya</h2>
+                    <p>
+                        Jangan ragu untuk menghubungi saya jika ingin berdiskusi
+                        atau berkolaborasi.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-information reveal">
+                        <h3>Contact Person</h3>
+                        <p>
+                            Anda dapat menghubungi saya melalui informasi berikut
+                            atau mengirimkan pesan melalui formulir.
+                        </p>
+
+                        <div class="contact-items">
+                            <a href="mailto:subkhanfabian@gmail.com" class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span>Email</span>
+                                    <strong>subkhanfabian@gmail.com</strong>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/6282136870699" target="_blank"
+                                rel="noopener noreferrer" class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span>WhatsApp</span>
+                                    <strong>+62 821-3687-0699</strong>
+                                </div>
+                            </a>
+
+                            <a href="https://instagram.com/lost.biian_" target="_blank"
+                                rel="noopener noreferrer" class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <div>
+                                    <span>Instagram</span>
+                                    <strong>@fabiansubkhan</strong>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/subkhanfabian-rgb" target="_blank"
+                                rel="noopener noreferrer" class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div>
+                                    <span>GitHub</span>
+                                    <strong>github.com/fabiansubkhan</strong>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/fabian-subkhan-680a9937b" target="_blank"
+                                rel="noopener noreferrer" class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <div>
+                                    <span>LinkedIn</span>
+                                    <strong>linkedin.com/in/fabiansubkhan</strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper reveal">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nama</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Masukkan nama Anda"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="contoh@email.com"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Pesan</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Tulis pesan Anda di sini..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Kirim Pesan
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <p id="formMessage" class="form-message"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div>
+                <a href="#home" class="footer-logo">Fabian<span>.</span></a>
+                <p>Membangun solusi digital dengan kreativitas dan teknologi.</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://github.com/subkhanfabian-rgb" target="_blank"
+                    rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/fabian-subkhan-680a9937b" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com/lost.biian_?vrfl=cnFxdHJ0NWtxajNr" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Fabian Subkhan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
